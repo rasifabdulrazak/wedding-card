@@ -54,35 +54,47 @@ a {
     color: inherit;
 }
 
-/* Audio Button */
-.audio-btn {
+/* Controls (Audio & Language) */
+.controls-container {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.control-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: var(--clr-gold);
     color: white;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
-    z-index: 1000;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
     transition: var(--transition-smooth);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--font-body);
+    font-weight: 600;
 }
 
-.audio-btn:hover {
+.control-btn:hover {
     transform: scale(1.1);
     background-color: var(--clr-dark-green);
     box-shadow: 0 6px 20px rgba(44, 74, 59, 0.4);
 }
 
-.audio-btn.playing {
+.control-btn.playing {
     animation: pulse 2s infinite;
+}
+
+#lang-toggle {
+    font-size: 0.8rem;
 }
 
 @keyframes pulse {
