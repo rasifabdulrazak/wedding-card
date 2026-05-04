@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groom & Bride - Wedding Invitation</title>
+    <meta name="description" content="We request the honor of your presence to celebrate our Nikkah & Reception.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Audio toggle -->
+    <button id="audio-toggle" class="audio-btn" aria-label="Toggle background music">
+        <i class="fas fa-music"></i>
+    </button>
+    <audio id="bg-audio" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <!-- Placeholder audio -->
+    </audio>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#location">Location</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section-reveal">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content">
+            <div class="bismillah">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Basmala.svg" alt="Bismillah" class="bismillah-svg">
+            </div>
+            
+            <h1 class="couple-names">Rasif <span class="heart-icon">🤍</span> Ragda</h1>
+            <p class="subtitle">Together with their families, invite you to celebrate their wedding</p>
+            
+            <div class="parents-names">
+                <p>Son of Abdul Razak & Rahina</p>
+                <p class="ampersand">&</p>
+                <p>Daughter of Saeed & Sajida</p>
+            </div>
+            
+            <div class="countdown-container">
+                <p class="countdown-title">Save the Date</p>
+                <div class="countdown" id="countdown">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <p>Mins</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <p>Secs</p>
+                    </div>
+                </div>
+                <p class="wedding-date">July 11, 2026</p>
+            </div>
+        </div>
+        <!-- <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div> -->
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote section-reveal">
+        <div class="pattern-bg"></div>
+        <div class="quote-content">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <blockquote>
+                "And We created you in pairs"
+            </blockquote>
+            <cite>— Quran 78:8</cite>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events section-reveal">
+        <div class="event-card nikkah slide-up">
+            <div class="event-icon">
+                <i class="fas fa-mosque"></i>
+            </div>
+            <h2>Nikkah</h2>
+            <div class="event-details">
+                <p><i class="far fa-clock"></i> 11:30 AM</p>
+                <p><i class="far fa-calendar-alt"></i> July 11, 2026</p>
+                <p><i class="fas fa-map-marker-alt"></i> KP Lounge</p>
+                <p class="address">Kondotty, Malappuram, Kerala</p>
+            </div>
+            <a href="https://maps.app.goo.gl/LmHheajuQQSXLmEM6" class="btn-location" target="_blank"><i class="fas fa-map"></i> View Location</a>
+        </div>
+
+        <div class="event-card reception slide-up delay-1">
+            <div class="event-icon">
+                <i class="fas fa-glass-cheers"></i>
+            </div>
+            <h2>Reception</h2>
+            <div class="event-details">
+                <p><i class="far fa-clock"></i> 4:00 PM onwards</p>
+                <p><i class="far fa-calendar-alt"></i> July 11, 2026</p>
+                <p><i class="fas fa-map-marker-alt"></i> PALACE AUDITORIUM</p>
+                <p class="address">Kondotty, Malappuram, Kerala</p>
+            </div>
+            <a href="https://maps.app.goo.gl/SHVzeXzSupNKYKTn6" class="btn-location" target="_blank"><i class="fas fa-map"></i> View Location</a>
+        </div>
+    </section>
+
+    <!-- Location Maps (Simulated) -->
+    <section id="location" class="location section-reveal">
+        <h2 class="section-title">Event Locations</h2>
+        <div class="maps-container">
+            <div class="map-box slide-up">
+                <h3>Nikkah Venue</h3>
+                <div class="map-placeholder">
+                    <!-- Paste your Google Maps embed iframe src below -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4008621.45408741!2d71.09252929687496!3d11.137981939204948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64eddc63ff735%3A0x12a284d5b0efe62b!2sKP%20Lounge!5e0!3m2!1sen!2sin!4v1777913734547!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="map-box slide-up delay-1">
+                <h3>Reception Venue</h3>
+                <div class="map-placeholder">
+                    <!-- Paste your Google Maps embed iframe src below -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4008435.746616835!2d71.10626220703124!3d11.151455875525736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64fd797f37ab5%3A0xf8134a2d1903a562!2sPalace%20Auditorium%20Ekkaparambu!5e0!3m2!1sen!2sin!4v1777913494618!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section class="closing section-reveal">
+        <div class="closing-content">
+            <p class="closing-message">We request the honor of your presence and prayers on our special day.</p>
+            <img src="muslim_wedding_couple.png" alt="Couple Illustration" class="couple-cartoon">
+            <h2 class="couple-names-small">Rasif & Ragda</h2>
+            <div class="ornament-bottom">
+                <i class="fas fa-seedling"></i>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
