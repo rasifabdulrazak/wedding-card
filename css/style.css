@@ -12,8 +12,9 @@
     --clr-text-light: #666666;
     
     /* Typography */
-    --font-heading: 'Amiri', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Raleway', sans-serif;
+    --font-script: 'Great Vibes', cursive;
     
     /* Transitions */
     --transition-smooth: all 0.5s ease-in-out;
@@ -38,8 +39,14 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, .bismillah, .couple-names, .couple-names-small, blockquote, .countdown-title {
+h2, h3, .bismillah, .countdown-title, .section-title {
     font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+h1, .couple-names, .couple-names-small, blockquote, .ampersand {
+    font-family: var(--font-script);
+    font-weight: 400;
 }
 
 a {
@@ -184,17 +191,18 @@ a {
 }
 
 .couple-names {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--clr-dark-green);
-    margin: 1rem 0;
-    font-weight: 400;
+    margin: 0.5rem 0;
+    text-shadow: 0.3px 0.3px 0 var(--clr-dark-green); /* Very subtle thickness, isolated to just the hero names */
 }
 
 .heart-icon {
-    font-size: 2rem;
+    font-size: 0.6em; /* Scale relative to parent text */
     color: var(--clr-gold);
     animation: heartbeat 2s infinite;
     display: inline-block;
+    vertical-align: middle;
 }
 
 @keyframes heartbeat {
@@ -220,9 +228,8 @@ a {
 
 .ampersand {
     color: var(--clr-gold);
-    font-size: 1.5rem;
-    font-family: var(--font-heading);
-    margin: 0.5rem 0;
+    font-size: 2.5rem;
+    margin: -0.5rem 0;
 }
 
 .countdown-container {
@@ -508,7 +515,7 @@ cite {
 }
 
 .couple-names-small {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--clr-dark-green);
     margin-bottom: 2rem;
 }
@@ -560,7 +567,7 @@ cite {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .couple-names { font-size: 3rem; }
+    .couple-names { font-size: 7vw; white-space: nowrap; }
     .countdown { gap: 1rem; }
     .time-box span { font-size: 2rem; min-width: 50px; }
     blockquote { font-size: 2rem; }
@@ -570,7 +577,7 @@ cite {
 }
 
 @media (max-width: 480px) {
-    .couple-names { font-size: 2.4rem; margin: 0.5rem 0; line-height: 1.2; }
+    .couple-names { font-size: 11.5vw; margin: 0.5rem 0; line-height: 1.2; white-space: nowrap; }
     .subtitle { font-size: 0.8rem; letter-spacing: 2px; }
     .countdown { gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
     .time-box span { font-size: 1.8rem; min-width: 50px; }
@@ -579,8 +586,8 @@ cite {
     .hero-content { padding: 2.5rem 1rem; }
     .events, .location, .quote, .closing { padding: 4rem 1.2rem; }
     .parents-names { font-size: 0.9rem; margin-bottom: 2rem; }
-    blockquote { font-size: 1.6rem; line-height: 1.5; }
-    .couple-names-small { font-size: 2.5rem; }
+    blockquote { font-size: 2.5rem; line-height: 1.5; }
+    .couple-names-small { font-size: 3rem; }
     .event-card { padding: 2rem 1.5rem; }
     .section-title { font-size: 2rem; margin-bottom: 2rem; }
 }
