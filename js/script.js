@@ -182,7 +182,17 @@ document.addEventListener('DOMContentLoaded', () => {
         event_locations: { en: "Event Locations", ml: "വേദികൾ" },
         nikkah_venue: { en: "Nikkah Venue", ml: "നിക്കാഹ് വേദി" },
         reception_venue: { en: "Reception Venue", ml: "സൽക്കാര വേദി" },
-        closing_msg: { en: "We request the honor of your presence and prayers on our special day.", ml: "ഞങ്ങളുടെ ഈ സുദിനത്തിൽ നിങ്ങളുടെ സാന്നിധ്യവും പ്രാർത്ഥനയും പ്രതീക്ഷിക്കുന്നു." }
+        closing_msg: { en: "We request the honor of your presence and prayers on our special day.", ml: "ഞങ്ങളുടെ ഈ സുദിനത്തിൽ നിങ്ങളുടെ സാന്നിധ്യവും പ്രാർത്ഥനയും പ്രതീക്ഷിക്കുന്നു." },
+        view_family: { en: "View Family Details", ml: "കുടുംബ വിവരങ്ങൾ കാണുക" },
+        family_details: { en: "Family Details", ml: "കുടുംബ വിവരങ്ങൾ" },
+        groom_side: { en: "Groom's Family", ml: "വരൻ്റെ കുടുംബം" },
+        bride_side: { en: "Bride's Family", ml: "വധുവിൻ്റെ കുടുംബം" },
+        brothers: { en: "Brothers:", ml: "സഹോദരങ്ങൾ:" },
+        sisters: { en: "Sisters:", ml: "സഹോദരിമാർ:" },
+        in_laws: { en: "In-laws:", ml: "ബന്ധുക്കൾ:" },
+        brother_single: { en: "(Brother)", ml: "(സഹോദരൻ)" },
+        sister_single: { en: "(Sister)", ml: "(സഹോദരി)" },
+        children: { en: "Children:", ml: "മക്കൾ:" }
     };
 
     const langToggleBtn = document.getElementById('lang-toggle');
@@ -206,5 +216,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (langToggleBtn) {
             langToggleBtn.innerText = lang === 'ml' ? "En" : "മ";
         }
+    }
+
+    // --- 7. Family Modal ---
+    const familyModal = document.getElementById('family-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const openFamilyModalBtn = document.getElementById('open-family-modal');
+    const closeFamilyModalBtn = document.querySelector('.close-modal');
+
+    if (openFamilyModalBtn && familyModal && modalOverlay && closeFamilyModalBtn) {
+        const openModal = () => {
+            familyModal.classList.add('active');
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        };
+
+        const closeModal = () => {
+            familyModal.classList.remove('active');
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        openFamilyModalBtn.addEventListener('click', openModal);
+        closeFamilyModalBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
     }
 });
