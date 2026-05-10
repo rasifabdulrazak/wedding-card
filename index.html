@@ -163,11 +163,71 @@
             <p class="closing-message" data-lang="closing_msg">We request the honor of your presence and prayers on our special day.</p>
             <img src="muslim_wedding_couple.png" alt="Couple Illustration" class="couple-cartoon">
             <h2 class="couple-names-small"><span data-lang="rasif">Rasif</span> & <span data-lang="ragda">Ragda</span></h2>
+            
+            <button id="open-family-modal" class="btn-family"><i class="fas fa-users"></i> <span data-lang="view_family">View Family Details</span></button>
+
             <div class="ornament-bottom">
                 <i class="fas fa-seedling"></i>
             </div>
         </div>
     </section>
+
+    <!-- Family Modal -->
+    <div id="modal-overlay" class="modal-overlay"></div>
+    <div id="family-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title" data-lang="family_details">Family Details</h2>
+            
+            <div class="family-section">
+                <h3 class="family-side" data-lang="groom_side">Groom's Family</h3>
+                <div class="family-list">
+                    <div class="family-item">
+                        <div class="family-relation" data-lang="sister_single">Sister</div>
+                        <div class="family-names">
+                            <strong>Shaniba</strong> <span class="amp">&</span> <strong>Wazil</strong>
+                        </div>
+                        <div class="family-children">
+                            <i class="fas fa-child"></i> <span data-lang="children">:</span> Dua Mehr, Eizin, Sema 
+                        </div>
+                    </div>
+                    <div class="family-item">
+                        <div class="family-relation" data-lang="sister_single">Sister</div>
+                        <div class="family-names">
+                            <strong>Labeeba</strong> <span class="amp">&</span> <strong>Irshad</strong>
+                        </div>
+                        <div class="family-children">
+                            <i class="fas fa-child"></i> <span data-lang="children">:</span> Yaani, Johan
+                        </div>
+                    </div>
+                    <div class="family-item">
+                        <div class="family-relation" data-lang="brother_single">Brother</div>
+                        <div class="family-names">
+                            <strong>Naji Sahal</strong> <span class="amp">&</span> <strong>Luriya</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="family-section">
+                <h3 class="family-side" data-lang="bride_side">Bride's Family</h3>
+                <div class="family-list">
+                    <div class="family-item">
+                        <div class="family-relation" data-lang="brothers">Brothers</div>
+                        <div class="family-names">
+                            <strong>Faris</strong>, <strong>Adhnan</strong>
+                        </div>
+                    </div>
+                    <div class="family-item">
+                        <div class="family-relation" data-lang="sister_single">Sister</div>
+                        <div class="family-names">
+                            <strong>Silu</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
