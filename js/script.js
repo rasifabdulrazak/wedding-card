@@ -192,7 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
         in_laws: { en: "In-laws:", ml: "ബന്ധുക്കൾ:" },
         brother_single: { en: "(Brother)", ml: "(സഹോദരൻ)" },
         sister_single: { en: "(Sister)", ml: "(സഹോദരി)" },
-        children: { en: "Children:", ml: "മക്കൾ:" }
+        children: { en: "Children", ml: "മക്കൾ" },
+        husband: { en: "(Husband)", ml: "(ഭർത്താവ്)" },
+        wife: { en: "(Wife)", ml: "(ഭാര്യ)" }
     };
 
     const langToggleBtn = document.getElementById('lang-toggle');
