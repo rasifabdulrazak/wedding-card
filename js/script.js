@@ -194,7 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
         sister_single: { en: "(Sister)", ml: "(സഹോദരി)" },
         children: { en: "Children", ml: "മക്കൾ" },
         husband: { en: "(Husband)", ml: "(ഭർത്താവ്)" },
-        wife: { en: "(Wife)", ml: "(ഭാര്യ)" }
+        wife: { en: "(Wife)", ml: "(ഭാര്യ)" },
+        day_name: { en: "Saturday", ml: "ശനിയാഴ്ച" },
+        compliments_text: { en: "With Heartfelt Prayers & Warmest Regards", ml: "ഹൃദയം നിറഞ്ഞ പ്രാർത്ഥനകളോടെ" },
+        compliments_from: { en: "From Relatives, Friends & Well-Wishers", ml: "ബന്ധുക്കളും സുഹൃത്തുക്കളും" }
     };
 
     const langToggleBtn = document.getElementById('lang-toggle');
