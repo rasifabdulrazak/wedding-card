@@ -876,4 +876,6 @@ cite {
     .couple-names-small { font-size: 3rem; }
     .event-card { padding: 2rem 1.5rem; }
     .section-title { font-size: 2rem; margin-bottom: 2rem; }
+    .wedding-date { font-size: 1.1rem; letter-spacing: 2px; gap: 8px; white-space: nowrap; }
+    .wedding-date::before, .wedding-date::after { width: 30px; }
 }
