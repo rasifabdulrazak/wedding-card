@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 8. Auto Scroll ---
     let autoScrollAnimation;
     let isAutoScrolling = false;
-    let scrollSpeed = 0.6; // Subtle speed
+    let scrollSpeed = window.innerWidth < 768 ? 1.5 : 0.8; // Faster on mobile
 
     const startAutoScroll = () => {
         isAutoScrolling = true;
