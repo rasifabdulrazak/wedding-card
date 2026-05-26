@@ -1,5 +1,11 @@
 // js/script.js
 
+// Prevent browser from restoring previous scroll position on refresh
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. Countdown Timer ---
@@ -172,12 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
         quote: { en: '"And We created you in pairs"', ml: '"നിങ്ങളെ നാം ഇണകളായി സൃഷ്ടിച്ചു"' },
         quote_ref: { en: "— Quran 78:8", ml: "— ഖുർആൻ 78:8" },
         nikkah_title: { en: "Nikkah", ml: "നിക്കാഹ്" },
-        nikkah_time: { en: "11:30 AM", ml: "രാവിലെ 11:30" },
+        nikkah_time: { en: "11:00 AM", ml: "രാവിലെ 11:00" },
         kp_lounge: { en: "KP Lounge", ml: "കെ.പി ലോഞ്ച്" },
         kondotty_address: { en: "Kondotty, Malappuram, Kerala", ml: "കൊണ്ടോട്ടി, മലപ്പുറം, കേരളം" },
         view_location: { en: "View Location", ml: "സ്ഥലം കാണുക" },
         reception_title: { en: "Reception", ml: "സൽക്കാരം" },
-        reception_time: { en: "4:00 PM onwards", ml: "വൈകുന്നേരം 4:00 മുതൽ" },
+        reception_time: { en: "4:30 PM onwards", ml: "വൈകുന്നേരം 4:30 മുതൽ" },
         palace_auditorium: { en: "PALACE AUDITORIUM", ml: "പാലസ് ഓഡിറ്റോറിയം" },
         event_locations: { en: "Event Locations", ml: "വേദികൾ" },
         nikkah_venue: { en: "Nikkah Venue", ml: "നിക്കാഹ് വേദി" },
@@ -246,4 +252,52 @@ document.addEventListener('DOMContentLoaded', () => {
         closeFamilyModalBtn.addEventListener('click', closeModal);
         modalOverlay.addEventListener('click', closeModal);
     }
+
+    // --- 8. Auto Scroll ---
+    let autoScrollAnimation;
+    let isAutoScrolling = false;
+    let scrollSpeed = 0.6; // Subtle speed
+
+    const startAutoScroll = () => {
+        isAutoScrolling = true;
+        const scrollStep = () => {
+            if (!isAutoScrolling) return;
+            window.scrollBy(0, scrollSpeed);
+            
+            // Stop if reached the bottom
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                stopAutoScroll();
+                return;
+            }
+            autoScrollAnimation = requestAnimationFrame(scrollStep);
+        };
+        autoScrollAnimation = requestAnimationFrame(scrollStep);
+    };
+
+    const stopAutoScroll = () => {
+        isAutoScrolling = false;
+        if (autoScrollAnimation) {
+            cancelAnimationFrame(autoScrollAnimation);
+        }
+    };
+
+    // Start auto scroll after 4 seconds
+    const autoScrollTimeout = setTimeout(() => {
+        // Only start if they haven't scrolled down significantly already
+        if (window.scrollY < 100) {
+            startAutoScroll();
+        }
+    }, 4000);
+
+    // Stop auto scroll permanently on any user interaction
+    const stopEvents = ['touchstart', 'mousedown', 'wheel', 'keydown', 'scroll'];
+    stopEvents.forEach(eventType => {
+        window.addEventListener(eventType, () => {
+            // Only stop if they actually interacted
+            if (eventType !== 'scroll' || !isAutoScrolling) {
+                clearTimeout(autoScrollTimeout);
+                stopAutoScroll();
+            }
+        }, { passive: true });
+    });
 });
