@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. Countdown Timer ---
-    const countdownDate = new Date("Jul 11, 2026 11:30:00").getTime();
+    const countdownDate = new Date("Jul 11, 2026 11:00:00").getTime();
 
     const updateCountdown = () => {
         const now = new Date().getTime();
