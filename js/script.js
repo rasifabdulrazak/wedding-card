@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quote: { en: '"And We created you in pairs"', ml: '"നിങ്ങളെ നാം ഇണകളായി സൃഷ്ടിച്ചു"' },
         quote_ref: { en: "— Quran 78:8", ml: "— ഖുർആൻ 78:8" },
         nikkah_title: { en: "Nikkah", ml: "നിക്കാഹ്" },
-        nikkah_time: { en: "11:00 AM", ml: "രാവിലെ 11:00" },
+        nikkah_time: { en: "10:30 AM", ml: "രാവിലെ 10:30" },
         kp_lounge: { en: "KP Lounge", ml: "കെ.പി ലോഞ്ച്" },
         kondotty_address: { en: "Kondotty, Malappuram, Kerala", ml: "കൊണ്ടോട്ടി, മലപ്പുറം, കേരളം" },
         view_location: { en: "View Location", ml: "സ്ഥലം കാണുക" },
